@@ -33,34 +33,24 @@ routes.get('/',(req,res)=>{
 
 //update page route
 routes.post('/post',(req,res)=>{
-//input datavalidation
 
-
-// async function updatadb(){
-//   let resu = await Datamodel.findByIdAndUpdate("625908d378ae67ace32a6685",{
-//       $set:{
-//           firedata:0
-//           }
-//   })
-//   console.log(resu)
-// }
-// updatadb() 
-// res.send("updated")
     var fired = Number(req.body.fire);
     var  gasd=  Number(req.body.gas);
     var waterd = Number(req.body.water);
     var ledd = Number(req.body.led);
     console.log([fired,gasd,waterd,ledd])
+
+
    //validation and twilio came here
    //twilio
    if(fired === 1){
-    //  sendsms("fire is detected in home")
+      sendsms("fire is detected in home")
    }
    if(gasd === 1){
-    //  sendsms("gas is leaking in home")
+       sendsms("gas is leaking in home")
    }
    if(waterd===1){
-    //  sendsms("water is full in home")
+     sendsms("water is full in home")
    }
    
     async function datatodb(){
