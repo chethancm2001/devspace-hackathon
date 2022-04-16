@@ -1,6 +1,8 @@
 # Connected Things
 ![Image](resources/ct.png)
 
+[click here to enter Connected things](https://link-url-here.org)
+
 A State-of-the-Art Web based service to interact with sensors planted in home and to react to them in real-time
 
 ## Inspiration
