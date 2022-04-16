@@ -54,13 +54,13 @@ routes.post('/post',(req,res)=>{
    //validation and twilio came here
    //twilio
    if(fired === 1){
-     sendsms("fire is detected in home")
+    //  sendsms("fire is detected in home")
    }
    if(gasd === 1){
-     sendsms("gas is leaking in home")
+    //  sendsms("gas is leaking in home")
    }
    if(waterd===1){
-     sendsms("water is full in home")
+    //  sendsms("water is full in home")
    }
    
     async function datatodb(){
