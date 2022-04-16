@@ -25,7 +25,8 @@ function sendsms(mess){
 //home page route
 routes.get('/',(req,res)=>{
     async function datafromdb(){
-       
+      let updatedval = await Datamodel.find({})
+      res.send(updatedval)
         
         }
         datafromdb()
@@ -54,14 +55,9 @@ routes.post('/post',(req,res)=>{
    }
    
     async function datatodb(){
-        let datan = new Datamodel({firedata:fired,gasdata:gasd,waterlevel:waterd,led:ledd})
-        let result =await  datan.save()
-        if(result){
-            res.send(result)
-        }
-        else{
-          res.send('not updated')
-        }
+        let datan = await Datamodel.findOneAndUpdate({_id:"625a8cb40b0b6f9c25372ae2"},{firedata:fired,gasdata:gasd,waterlevel:waterd,led:ledd})
+        let updatedval = await Datamodel.find({})
+        res.send(updatedval)
     }
     datatodb()
 
