@@ -1,6 +1,7 @@
 //importing the packages
 const express = require('express')
 const mogoose = require('mongoose')
+const cors = require('cors')
 const routes = require('./routing.js')
 
 //creating the app
@@ -15,7 +16,7 @@ mogoose.connect("mongodb+srv://chethancm001:chethancm@cluster0.2p5zc.mongodb.net
 //midlewares
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-
+app.use(cors({origin:"*"}))
 app.use(express.static('frontend'))
 
 
