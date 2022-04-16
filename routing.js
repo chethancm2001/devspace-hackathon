@@ -1,8 +1,9 @@
 const express = require('express')
 const twilio = require('twilio')
 const Datamodel = require("./model.js")
+require ('dotenv').config()
 
-const client = new twilio("AC753703eee11db4feddc2c6bbbf00912b", "25132e0b4b1e51d08390085070673d17");
+const client = new twilio(process.env.SID, process.env.TOKEN);
 routes = express.Router()
 client.logLevel = 'debug';
 //all the router  come here 
