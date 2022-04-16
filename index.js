@@ -2,8 +2,8 @@
 const express = require('express')
 const mogoose = require('mongoose')
 const routes = require('./routing.js')
-// const cros = require('cors')
 
+//creating the app
 const app = express()
 
 //connecting monogdb
@@ -13,11 +13,10 @@ mogoose.connect("mongodb+srv://chethancm001:chethancm@cluster0.2p5zc.mongodb.net
 }).catch(()=>{console.log('connected to db')})
 
 //midlewares
-// app.use(cros())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-//ejs setup
+app.use(express.static('frontend'))
 
 
 //all the routes goes here
@@ -25,7 +24,7 @@ app.use('/',routes)
 
 
 
-
+//port 
 const port = process.env.PORT || 3000
 
 //setting the server

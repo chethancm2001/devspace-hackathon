@@ -1,7 +1,10 @@
 const express = require('express')
+const path = require('path')
 const twilio = require('twilio')
 const Datamodel = require("./model.js")
 require ('dotenv').config()
+
+
 
 const client = new twilio(process.env.SID, process.env.TOKEN);
 routes = express.Router()
@@ -19,14 +22,18 @@ function sendsms(mess){
   }).catch(err=>{console.log(err)})
   }
 
+
+routes.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'frontend/index1.html'));
+  });
   
   
 
 //home page route
-routes.get('/',(req,res)=>{
+routes.get('/api',(req,res)=>{
     async function datafromdb(){
       let updatedval = await Datamodel.find({})
-      res.send(updatedval)
+      res.json(updatedval)
         
         }
         datafromdb()
