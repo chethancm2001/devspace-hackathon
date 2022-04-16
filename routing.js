@@ -52,7 +52,7 @@ routes.post('/post',(req,res)=>{
     console.log([fired,gasd,waterd,ledd])
    //validation and twilio came here
    //twilio
-   if(fired===1){
+   if(fired === 1){
      sendsms("fire is detected in home")
    }
    if(gasd === 1){
