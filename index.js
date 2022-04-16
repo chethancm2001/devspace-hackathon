@@ -2,7 +2,7 @@
 const express = require('express')
 const mogoose = require('mongoose')
 const routes = require('./routing.js')
-const cros = require('cors')
+// const cros = require('cors')
 
 const app = express()
 
@@ -13,7 +13,7 @@ mogoose.connect("mongodb+srv://chethancm001:chethancm@cluster0.2p5zc.mongodb.net
 }).catch(()=>{console.log('connected to db')})
 
 //midlewares
-app.use(cros())
+// app.use(cros())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
