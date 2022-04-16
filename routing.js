@@ -25,7 +25,7 @@ function sendsms(mess){
 //home page route
 routes.get('/',(req,res)=>{
     async function datafromdb(){
-        let data1 = await deleteMany({}, ()=>{res.send('delted all')})
+       
         
         }
         datafromdb()
