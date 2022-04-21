@@ -150,7 +150,7 @@
                         <p class="mb-0 text-muted">GAS SYSTEM MONITOR</p>
                         <p class="mb-0 text-muted">ALL GOOD :-)</p>
                       </div>
-                      <h4 id="gash">1352</h4>
+                      <h4 id="gash">0</h4>
                       <img src="images/gas.png" height="100px" width="100px">
 
                       <canvas id="transactions-chart" class="mt-auto" height="65"></canvas>
@@ -203,8 +203,8 @@
     .then((res) =>{return res.json()})
     .then((data)=>{
         let fval =  data[0].firedata;
-        let gval =  data[0].firedata;
-        let wval =  data[0].firedata;
+        let gval =  data[0].gasdata;
+        let wval =  data[0].waterlevel;
        fireval.innerHTML = fval;
        gireval.innerHTML = gval;
        wireval.innerHTML = wval;
