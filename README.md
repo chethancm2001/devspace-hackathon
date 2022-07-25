@@ -5,7 +5,7 @@
 #
 [Here is hardware program ](https://github.com/chethancm2001/postdata)
 
-A State-of-the-Art Web based service to interact with sensors planted in home and to react to them in real-time
+and I'm emailing you to ask about a potential interning opportunity at your company.
 
 ## Inspiration
 IoT peripheral devices like Sensors are great for collecting data but when it comes to Processing the data and making decisions based on it, we run into serious processing issues due to lack of Compute power on these tiny little things. To overcome this problem we take the processing load from the Sensors to Cloud.
