@@ -1,5 +1,5 @@
 # Connected Things
-## Esp8266 collects the data form the hardware and make post request to the https://connected-things.herokuapp.com/post end point the backend is configured in such way that it colldects the data and stores it in a database the mongodb is the database is used . To make the api express is used 
+## Esp8266 collects the data form the hardware and make post request to the https://connected-things.herokuapp.com/post end point the backend is configured in such way that it collects the data and stores it in a mongodb . To make the api express is used 
 
 [click here to enter Connected things](https://connected-things.herokuapp.com/)
 #
